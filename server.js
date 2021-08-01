@@ -1,9 +1,7 @@
 const http = require('http');
 const server = http.createServer((req,res)=>{
-    res.statusCode=200;
-    res.setHeader('Content-Type','text/html');
-    res.write('<h1>HI THERE I AM ABHISHEK</h1>');
-    res.end();
+   res.writeHead(200,{'Content-Type':'text/html'})
+   res.end('<h1>This is routes branch</h1>')
 })
 
 const PORT = process.env.PORT || 8000;
